@@ -1,22 +1,11 @@
-const link_items = document.querySelectorAll('.link_item');
-const header = document.querySelector('header');
+// SideMenu
+const sideMenuButtons = document.querySelectorAll('.sidemenu-button');
+const sideMenu = document.querySelector('.sideMenu');
 
-for(const link of link_items) {
-  link.addEventListener('mouseover', activateDropdown);
+for(const button of sideMenuButtons) {
+  button.addEventListener('click', toggleSideMenu);
 }
 
-header.addEventListener('mouseleave', removeDropdown)
-
-function activateDropdown(event) {
-  for(const link of link_items) {
-    link.children[0].classList.remove('active');
-  }
-  const dropdown = event.target.children[0];
-  dropdown.classList.add('active');
-}
-
-function removeDropdown() {
-  for(const link of link_items) {
-    link.children[0].classList.remove('active');
-  }
+function toggleSideMenu() {
+  sideMenu.classList.toggle('active');
 }
