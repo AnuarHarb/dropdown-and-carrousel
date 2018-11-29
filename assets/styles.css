@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #0081AF;
+  --highlight-color: #2DC7FF;
+
+  --lines-color: #EABA6B;
+}
+
+body {
+  font-family: arial;
+}
+
+header {
+  align-items: center;
+  background-color: var(--primary-color);
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Dropdown Menu */
+.list_item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  position: relative; /* Para que sea la referencia del dropdown */
+  width: 200px;
+}
+
+.list_item:hover {
+  background-color: var(--highlight-color);
+}
+
+.list_item:hover .dropdown { /* Que se muestre el dropdown cuando el mouse esté sobre el detonador */
+  display: block;
+}
+
+.dropdown {
+  display: none; /* Esconder el dropdown por default */
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 80px; /* Hay que acomodar el dropdown done queramos que aparesca */
+  left: 0;
+  width: 100%;
+}
+
+.dropdown ul {
+  list-style: none;
+}
+
+.dropdown li {
+  border-bottom: 1px solid var(--lines-color);
+  box-sizing: border-box;
+  padding: 20px 10px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: var(--highlight-color);
+}
+
+
+/* Carrousel */
+.carrousel {
+  height: 500px;
+  width: 100%;
+}
+
+.imageContainer {
+  display: flex;
+  height: 100%;
+  width: 500px;
+  overflow: hidden;
+}
+
+.carrouselItem {
+  align-items: center;
+  display: flex;
+  height: 500px;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.carrouselItem picture {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.carrouselItem picture img {
+  height: 100%;
+  width: 100%;
+}
