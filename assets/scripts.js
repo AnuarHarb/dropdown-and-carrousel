@@ -60,3 +60,7 @@ function slideLeft() {
 }
 
 function carrouselMove(carrouselCounter) {
+  for(const item of carrouselItems) {
+    item.style.transform = 'translateX(' + carrouselCounter +'px)'
+  }
+}
